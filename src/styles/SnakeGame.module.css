@@ -1,0 +1,123 @@
+.container {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.status {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.scores {
+  margin: 8px 0 0;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.scores span {
+  font-weight: 600;
+  color: #facc15;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  padding: 10px 16px;
+  color: #e2e8f0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.actions button:hover {
+  transform: translateY(-1px);
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.primary {
+  background: linear-gradient(135deg, #38bdf8, #60a5fa);
+  color: #030712;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  gap: 4px;
+  background: rgba(2, 6, 23, 0.8);
+  padding: 16px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 4px;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  background: rgba(71, 85, 105, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+}
+
+.snake {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.9), rgba(56, 189, 248, 0.7));
+}
+
+.head {
+  background: linear-gradient(135deg, #facc15, #f97316);
+}
+
+.apple {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.8);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 24px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .board {
+    gap: 2px;
+    padding: 12px;
+  }
+
+  .row {
+    gap: 2px;
+  }
+}
